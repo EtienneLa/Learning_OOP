@@ -11,48 +11,24 @@ public class Buch {
         return titel;
     }
 
-    public void setTitel(String titel) {
-        this.titel = titel;
-    }
-
     public double getPreis() {
         return preis;
-    }
-
-    public void setPreis(double preis) {
-        this.preis = preis;
     }
 
     public long getBarcode() {
         return barcode;
     }
 
-    public void setBarcode(long barcode) {
-        this.barcode = barcode;
-    }
-
     public int getSeiten() {
         return seiten;
-    }
-
-    public void setSeiten(int seiten) {
-        this.seiten = seiten;
     }
 
     public String getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
     public int getAuflage() {
         return auflage;
-    }
-
-    public void setAuflage(int auflage) {
-        this.auflage = auflage;
     }
 
     public String getBeschreibung() {
