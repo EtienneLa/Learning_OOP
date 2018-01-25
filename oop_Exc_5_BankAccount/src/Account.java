@@ -61,8 +61,13 @@ public class Account {
             System.err.println("Amount to be withdrawn is higher than your balance.");
     }
 
-    public String getAccDetails() {
+    public double getBalance() {
 
-        return "Account: " + accountNumber + "\nBalance: " + balance;
+        return balance;
+    }
+
+    public String getAccountNumber() {
+
+        return accountNumber;
     }
 }
