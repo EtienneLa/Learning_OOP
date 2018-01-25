@@ -4,11 +4,10 @@ public class Account {
     private String accountNumber;
     private boolean firstTime = true;
 
-    public Account(int bal, String acc) {
+    public Account(double bal, String acc) {
 
         if (bal >= 100) {
             balance = bal;
-            System.out.println("New balance: " + balance);
         }
         else
             System.err.println("Initial balance has to be at least 100.");
