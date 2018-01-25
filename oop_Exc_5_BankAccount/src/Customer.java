@@ -8,7 +8,7 @@ public class Customer {
 
     }
 
-    public void getName() {
+    public void getName(String na) {
 
 
     }

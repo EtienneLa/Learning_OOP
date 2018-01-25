@@ -1,7 +1,7 @@
 public class Bank {
 
     private double interestRate;
-    private double transactionFees;
+    private static double transactionFees = 2.5;
     private Customer[] customer;
 
     public void calculateInterest() {
@@ -14,8 +14,8 @@ public class Bank {
 
     }
 
-    public void getTransactionFees() {
+    public double getTransactionFees() {
 
-
+        return transactionFees;
     }
 }
