@@ -13,7 +13,7 @@ public class Main {
         Customer[] c = bank.getCustomer();
 
         while (true) {
-            System.out.println("Please enter your number of choice.");
+            System.out.println("\nPlease enter your number of choice.");
             System.out.println("1) Add Customer");
             System.out.println("2) Deposit Money");
             System.out.println("3) Withdraw Money");
@@ -38,7 +38,6 @@ public class Main {
                     Account account = new Account(bal, acc);
                     Customer customer = new Customer(name, account);
                     c[numOfCustomers] = customer;
-                    System.out.println("");
                     numOfCustomers++;
                     break;
 
@@ -85,6 +84,7 @@ public class Main {
                             System.err.println("Account Number not found.");
                     }
                     break;
+
                 case 4:
                     System.out.print("Please enter your Account Number: ");
                     acc = br.readLine();
@@ -105,8 +105,27 @@ public class Main {
                             System.err.println("Account Number not found.");
                     }
                     break;
+
                 case 5:
+                    System.out.print("Please enter your Account Number: ");
+                    acc = br.readLine();
+                    if (numOfCustomers == 0)
+                        System.out.print("Account Number not found.");
+                    else {
+                        boolean found = false;
+                        for (int i = 0; i < numOfCustomers; i++) {
+                            Account aTemp = c[i].getAccount();
+                            String accTemp = aTemp.getAccountNumber();
+                            if (accTemp.equals(acc)) {
+                                bank.calculateInterest(c[i]);
+                                found = true;
+                            }
+                        }
+                        if (!found)
+                            System.err.println("Account Number not found.");
+                    }
                     break;
+
                 case 6:
                     System.exit(0);
             }
