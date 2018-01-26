@@ -29,7 +29,7 @@ public class Account {
 
     public void withdraw(double withdr) {
 
-        if (withdr > 0 && withdr < balance) {
+        if (withdr > 0 && withdr <= balance) {
             if (firstTime) {
                 double tempBalance = balance - withdr;
                 if ( tempBalance >= 100) {
@@ -38,7 +38,7 @@ public class Account {
                             "\nNew balance: " + balance);
                     firstTime = false;
                 }
-                else
+                else if (tempBalance < 100)
                     System.err.println("The minimum balance on your account must be at least 100.");
             }
             else {

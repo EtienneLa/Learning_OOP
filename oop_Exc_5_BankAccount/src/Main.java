@@ -41,6 +41,7 @@ public class Main {
                     System.out.println("");
                     numOfCustomers++;
                     break;
+
                 case 2:
                     System.out.print("Please enter your Account Number: ");
                     acc = br.readLine();
@@ -62,9 +63,47 @@ public class Main {
                             System.err.println("Account Number not found.");
                     }
                     break;
+
                 case 3:
+                    System.out.print("Please enter your Account Number: ");
+                    acc = br.readLine();
+                    if (numOfCustomers == 0)
+                        System.err.println("Account Number not found.");
+                    else {
+                        boolean found = false;
+                        for (int i = 0; i < numOfCustomers; i++) {
+                            Account temp = c[i].getAccount();
+                            String accTemp = temp.getAccountNumber();
+                            if (accTemp.equals(acc)) {
+                                System.out.print("Please enter the amount to withdraw: ");
+                                double withdr = Double.parseDouble(br.readLine());
+                                temp.withdraw(withdr);
+                                found = true;
+                            }
+                        }
+                        if (!found)
+                            System.err.println("Account Number not found.");
+                    }
                     break;
                 case 4:
+                    System.out.print("Please enter your Account Number: ");
+                    acc = br.readLine();
+                    if (numOfCustomers == 0)
+                        System.err.println("Account Number not found.");
+                    else {
+                        boolean found = false;
+                        for (int i = 0; i < numOfCustomers; i++) {
+                            Customer cTemp = c[i];
+                            Account aTemp = c[i].getAccount();
+                            String accTemp = aTemp.getAccountNumber();
+                            if (accTemp.equals(acc)) {
+                                cTemp.display();
+                                found = true;
+                            }
+                        }
+                        if (!found)
+                            System.err.println("Account Number not found.");
+                    }
                     break;
                 case 5:
                     break;

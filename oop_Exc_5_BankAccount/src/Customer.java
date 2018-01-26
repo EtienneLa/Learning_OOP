@@ -9,9 +9,9 @@ public class Customer {
         account = a;
     }
 
-    public String display() {
+    public void display() {
 
-        return "Name: " + name + "\nAccount: " + account.getAccountNumber() + "\nBalance: " + account.getBalance();
+        System.out.println("Name: " + name + "\nAccount: " + account.getAccountNumber() + "\nBalance: " + account.getBalance());
     }
 
     public String getName() {
