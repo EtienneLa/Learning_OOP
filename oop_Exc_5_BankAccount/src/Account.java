@@ -8,6 +8,7 @@ public class Account {
 
         if (bal >= 100) {
             balance = bal;
+            System.out.println("Account has been created successfully.");
         }
         else
             System.err.println("Initial balance has to be at least 100.");
@@ -20,7 +21,7 @@ public class Account {
         if (depo > 0) {
             balance += depo;
             System.out.println(depo + " has been added to balance." +
-            "\n New balance: " + balance);
+            "\nNew balance: " + balance);
         }
         else
             System.err.println("Please ensure the amount to be deposited is not negative.");
