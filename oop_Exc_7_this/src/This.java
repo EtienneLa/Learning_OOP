@@ -8,7 +8,7 @@ public class This {
 
         test.num = 20;
         test.display();
-        
+
     }
 }
 
