@@ -4,6 +4,9 @@ public class StaticTest2 {
 
         Test test = new Test();
         Test test2 = new Test();
+
+        int n = Test.num;
+        System.out.println(n);
     }
 }
 
