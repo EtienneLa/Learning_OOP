@@ -21,7 +21,7 @@ class Pupil extends Person {
 
 class StudentSpeaker extends Pupil {
 
-    int academicYear;
+    private int academicYear;
 
     StudentSpeaker(String name, int age, double gradeAverage, int academicYear) {
         this.name = name;
