@@ -44,7 +44,7 @@ public class Account {
             else {
                 Bank bank = new Bank();
                 double tempBalance = balance;
-                tempBalance = tempBalance - withdr - bank.getTransactionFees();
+                tempBalance = tempBalance - withdr - Bank.transactionFees();
                 if ( tempBalance >= 100) {
                     balance = tempBalance;
                     System.out.println(withdr + " has been successfully withdrawn." +
